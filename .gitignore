@@ -216,3 +216,50 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- macOS ---
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Editors ---
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Secrets / credentials ---
+.env.*
+!.env.example
+*.pem
+*.p8
+*.key
+rsa_key*
+credentials.json
+secrets.yaml
+secrets.yml
+
+# --- Snowflake CLI ---
+config.toml
+connections.toml
+.snowflake/
+
+# --- dbt ---
+dbt_packages/
+dbt_modules/
+logs/
+.user.yml
+
+# --- AI エージェントのローカル設定 ---
+.claude/settings.local.json
+.claude/**/*.local.*
+.entire/
+.pi/
+.opencode/node_modules/
