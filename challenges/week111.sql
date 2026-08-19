@@ -4,8 +4,6 @@
 -- At FROSTY_FRIDAY() we're feeling rather grumpy and want to know whether we're right in saying that the great playwright might've been a bit overly emotional.
 -- Luckily, Snowflake has released the SEARCH() function for this very exact and specific use case.
 
--- SEARCH() 関数なんて知らないので知っている知識で解きたい。
-
 with quotes as (
     select 'Better three hours too soon than a minute too late.' as quote
     union all
@@ -44,18 +42,8 @@ with quotes as (
     select 'A horse! A horse! My kingdom for a horse!'
 ),
 
-ilike_function as (
-    select ilike(quote, '%love%') as contains_love, quote
-    from quotes
-),
-
 contains_function as (
-    select contains(quote, 'love') as contains_love, quote
-    from quotes
-),
-
-regexp_like_function as (
-    select regexp_like(quote, 'love') as contains_love, quote
+    select contains(lower(quote), 'love') as contains_love, quote
     from quotes
 ),
 
